@@ -30,4 +30,20 @@ void mergeTwo(vector<int>& a, vector<int>& b, vector<int>& merged)
             }
             else if(j==m)
             {
-                whi
+                while(i<n)
+                {
+                    merged.push_back(a[i]);
+                    i++;
+                }
+            }
+        }
+    }
+    vector<int> mergeThree(vector<int>& a, vector<int>& b, vector<int>& c) 
+    { 
+        //Your code here
+        vector<int> ans;
+        vector<int> temp;
+        mergeTwo(a, b, temp);
+        mergeTwo(temp, c, ans);
+        return ans;
+    } 
